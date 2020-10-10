@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="igp-8f-DqE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,14 +40,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1wy-a8-EKk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-zR-bP0">
-                                <rect key="frame" x="174" y="551" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Packages"/>
-                                <connections>
-                                    <action selector="akcages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="puf-nI-76l"/>
+                                    <segue destination="v1f-5y-A1a" kind="show" id="sNr-qU-GJi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,23 +62,38 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="97.767857142857139"/>
         </scene>
-        <!--PackagesVC-->
-        <scene sceneID="1N1-iE-Bsm">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="PackagesVC" storyboardName="PackagesSB" referencedIdentifier="PackagesVC" id="kcR-xJ-S92" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Hp-2h-kfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1351" y="453"/>
-        </scene>
         <!--SecondVC-->
-        <scene sceneID="9jG-bV-feF">
+        <scene sceneID="k5p-Aj-UMy">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SecondVC" storyboardName="second" referencedIdentifier="SecondVC" id="bUf-ZX-zSM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="gIh-zT-akP"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="olN-wN-5EH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SecondVC" id="v1f-5y-A1a" customClass="SecondVC" customModule="HorizontalCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nXb-Pr-D2y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconde VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-Ip-XJj">
+                                <rect key="frame" x="164" y="386" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Rsm-Yw-gDA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wb9-Ip-XJj" firstAttribute="leading" secondItem="4Gb-ie-JnT" secondAttribute="leading" constant="164" id="1YT-GI-OlO"/>
+                            <constraint firstItem="Wb9-Ip-XJj" firstAttribute="top" secondItem="4Gb-ie-JnT" secondAttribute="top" constant="298" id="Gzj-f2-bha"/>
+                            <constraint firstItem="4Gb-ie-JnT" firstAttribute="bottom" secondItem="Wb9-Ip-XJj" secondAttribute="bottom" constant="499" id="MSb-de-4EE"/>
+                            <constraint firstItem="4Gb-ie-JnT" firstAttribute="trailing" secondItem="Wb9-Ip-XJj" secondAttribute="trailing" constant="155" id="qCO-ZT-MOf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Gb-ie-JnT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NPP-cf-hKD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbN-DE-HYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="31"/>
+            <point key="canvasLocation" x="1845" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r3Y-iI-Ded">
